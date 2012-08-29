@@ -1,0 +1,78 @@
+/*Foundation Overrides */
+
+.row {
+	width:1440px;	
+}
+@media only screen and (max-width: 767px) {
+	.row {
+		width:auto;	
+	}
+}
+/*Login Module  ---------------------- */
+
+fieldset {
+	border:none;
+	margin-bottom:25px;	
+}
+fieldset.userdata {
+	margin-bottom:10px;	
+}
+
+/*article stuff  ---------------------- */
+
+.actions ul, ul.actions {
+	list-style:none;
+	width:200px;	
+}
+.actions ul li, ul.actions li {
+	display:inline-block;
+}
+.article-meta {
+	width:240px;
+	float:right;	
+}
+.article-footer ul {
+	list-style:none;
+}
+.article-info dt {
+	font-weight:bold;
+	font-size:1.6rem;
+	border-bottom:1px solid #666;
+	margin-bottom:4px;
+}
+.article-info dd {
+	margin-bottom:3px;
+}
+.pagenav {
+	list-style:none;	
+}
+.pagenav li a{
+	border:1px #333 solid;
+	padding:5px;	
+}
+.pagenav-next {
+text-align:right;
+}
+.filters select {
+	width:50px;	
+}
+#year, #month {
+	width:80px;	
+}
+.registration {
+	margin-bottom:25px;	
+}
+/* Pagination ---------------------- */
+.pagination ul { display: block; height: 24px; margin-left: -5px;}
+.pagination ul li { float: left; display: block; height: 24px; color: #999; font-size: 14px; margin-left: 5px; }
+.pagination ul li a { display: block; padding: 1px 7px 1px; color: #555; }
+.pagination ul li:hover a, ul li a:focus { background: #e6e6e6; }
+.pagination ul li.unavailable a { cursor: default; color: #999; }
+.pagination ul li.unavailable:hover a, ul li.unavailable a:focus { background: transparent; }
+.pagination ul li.current a { background: #2ba6cb; color: white; font-weight: bold; cursor: default; }
+.pagination ul li.current a:hover { background: #2ba6cb; }
+
+/* Form Stuff ---------------------- */
+.twelve input {
+	width:300px;	
+}
