@@ -25,6 +25,10 @@ article header {
 .actions {
 
 }
+
+.leading-articles, .intro-articles .article {
+	border-bottom:1px solid #999;	
+}
 .actions ul, ul.actions {
 	list-style:none;
 	width:200px;	
@@ -34,11 +38,11 @@ article header {
 }
 .article-meta {
 	width:240px;
-	float:right;
 	background: none repeat scroll 0 0 #F2F2F2;
     border: 1px solid #E6E6E6;
     margin: 0 0 22px;
-    padding: 20px;	
+    padding: 20px;
+	float:right;
 }
 .article-footer ul {
 	list-style:none;
@@ -73,6 +77,32 @@ text-align:right;
 }
 .button.dropdown ul.no-hover.show-dropdown {
 	top:28px !important;	
+}
+ul.pagenav, ul.pagenav li {
+    margin: 0;
+    padding: 0;
+}
+ul.pagenav li {
+    display: inline-block;
+    list-style-type: none;
+}
+li.pagenav-prev {
+    float: left;
+}
+li.pagenav-next {
+    float: right;
+}
+.pagenav li a {
+display: inline-block;
+    font-family: sans-serif;
+    margin: 1em 0;
+    max-width: 400px;
+    padding: 0.5em 0.75em;
+    position: relative;
+    text-align: center;
+}
+.article-footer {
+	overflow:hidden;	
 }
 /* Pagination ---------------------- */
 .pagination ul { display: block; height: 24px; margin-left: -5px;}
