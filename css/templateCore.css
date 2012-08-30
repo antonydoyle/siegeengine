@@ -19,7 +19,12 @@ fieldset.userdata {
 }
 
 /*article stuff  ---------------------- */
+article header {
+	overflow:hidden;	
+}
+.actions {
 
+}
 .actions ul, ul.actions {
 	list-style:none;
 	width:200px;	
@@ -29,7 +34,11 @@ fieldset.userdata {
 }
 .article-meta {
 	width:240px;
-	float:right;	
+	float:right;
+	background: none repeat scroll 0 0 #F2F2F2;
+    border: 1px solid #E6E6E6;
+    margin: 0 0 22px;
+    padding: 20px;	
 }
 .article-footer ul {
 	list-style:none;
@@ -61,6 +70,9 @@ text-align:right;
 }
 .registration {
 	margin-bottom:25px;	
+}
+.button.dropdown ul.no-hover.show-dropdown {
+	top:28px !important;	
 }
 /* Pagination ---------------------- */
 .pagination ul { display: block; height: 24px; margin-left: -5px;}

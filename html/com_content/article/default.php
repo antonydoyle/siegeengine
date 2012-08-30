@@ -47,9 +47,7 @@ if (!empty($this->item->pagination) AND $this->item->pagination && !$this->item-
 		<?php echo $this->escape($this->item->title); ?>
 	<?php endif; ?>
 	</h1>
-</header>    
-<?php endif; ?>
-<?php if ($canEdit ||  $params->get('show_print_icon') || $params->get('show_email_icon')) : ?>
+    <?php if ($canEdit ||  $params->get('show_print_icon') || $params->get('show_email_icon')) : ?>
 	<section class="actions">
     <ul>
 	<?php if (!$this->print) : ?>
@@ -80,6 +78,9 @@ if (!empty($this->item->pagination) AND $this->item->pagination && !$this->item-
 	</ul>
     </section>
 <?php endif; ?>
+</header>    
+<?php endif; ?>
+
 <?php  if (!$params->get('show_intro')) :
 	echo $this->item->event->afterDisplayTitle;
 endif; ?>

@@ -57,9 +57,9 @@ JHtml::_('behavior.keepalive');
 	<input type="hidden" name="return" value="<?php echo $return; ?>" />
 	<?php echo JHtml::_('form.token'); ?>
 	</fieldset>
-    <div href="#" class="button dropdown">
+    <div href="#" class="small button dropdown">
     Forgot Password / Username?
-	<ul>
+	<ul style="top: 28px;">
 		<li>
 			<a href="<?php echo JRoute::_('index.php?option=com_users&view=reset'); ?>">
 			<?php echo JText::_('MOD_LOGIN_FORGOT_YOUR_PASSWORD'); ?></a>

@@ -48,7 +48,9 @@ JHtml::_('behavior.keepalive');
     </form>
 </section>
 <section>
-    <ul>
+<div class="small button dropdown" href="#"> 
+Forgot Password / Username? 
+   <ul style="top: 28px !important;">
         <li>
             <a href="<?php echo JRoute::_('index.php?option=com_users&view=reset'); ?>">
                 <?php echo JText::_('COM_USERS_LOGIN_RESET'); ?></a>
@@ -66,5 +68,6 @@ JHtml::_('behavior.keepalive');
             </li>
             <?php endif; ?>
     </ul>
+    </div>
 </section>
 
