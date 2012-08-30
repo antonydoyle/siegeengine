@@ -115,6 +115,6 @@ display: inline-block;
 .pagination ul li.current a:hover { background: #2ba6cb; }
 
 /* Form Stuff ---------------------- */
-.twelve input {
+.columns input {
 	width:300px;	
 }
