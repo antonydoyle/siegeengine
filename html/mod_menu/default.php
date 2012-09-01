@@ -65,6 +65,11 @@ foreach ($list as $i => &$item) :
 			require JModuleHelper::getLayoutPath('mod_menu', 'default_url');
 			break;
 	endswitch;
+			if ($item->deeper) {
+			echo '	<a class="flyout-toggle" href="#">
+							<span> </span>
+							</a>';
+	}
 
 	// The next item is deeper.
 	if ($item->deeper) {
