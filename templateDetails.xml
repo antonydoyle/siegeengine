@@ -8,22 +8,10 @@
 	<authorUrl>http://www.antonydoyle.co.uk</authorUrl>
 	<copyright>Copyright (C) 2012 Antony Doyle | Siege21.com | Siegeworks. All rights Reserved</copyright>
 	<license>GNU General Public License version 2 or later</license>
-	<version>1.0</version>	
-	<description><![CDATA[
-		<h3>SiegeEngine - Joomla Template Framework</h3>
-		<p>SiegeEngine is our own Joomla template framework based on Foundation3 from Zurb.</p>
-		<p>All of the Foundation3 files are untouched, so you can make full use of this awesome CSS framework.</p>
-		<p>There is a built in implimentation of the Orbit slideshow but, if you want a little more flexibility, you can also use our module-ised version. See docs for usage.</p>
-		<p>Thanks / Credits / Props to:</p>
-		<ul>
-		<li>Seth Warburton (@nternetinspired) for his <a href="http://www.joomlafuture.com" title="Joomla Future" alt="Joomla Future">One Web framework / template</a>. Check it out, seriously. I borrowed a few elements, I hope it's alright? :)</li>
-		<li>Matt Thomas  (@betweenbrain) for <a href="http://construct-framework.com/" title="Construct Framework" alt="Construct Framework">Construct Framework</a>. Another excellent framework. I borrowed a few elements from there too, so thank you!</li>
-		<li><a href="http://www.joomla.org">Joomla!</a>, obviously.</li>
-		<li>The Foundation3 guys at Zurb. </li>
-		<li>Nescafe, for the coffee that kept me awake & focused</li>
-		<li>Anyone else who I've missed. I either read your books and thought "that's a good point", or listened to your opinions on Twitter and liked them. Thanks.</li>
-		</ul>
-		]]></description>
+	<version>1.2</version>	
+	<description>
+	TPL_SIEGEENGINE_DESCRIPTION
+		</description>
 		
 	<files>
         <filename>index.php</filename>
@@ -32,6 +20,7 @@
 		<folder>css</folder>
 		<folder>html</folder>
 		<folder>images</folder>
+		<folder>language</folder>
 		<folder>js</folder>
 	</files>
 	
@@ -62,7 +51,12 @@
 		<position>footerTop4</position>
 		<position>debug</position>
 	</positions>
-		
+	
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.tpl_siegeengine.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_siegeengine.sys.ini</language>
+	</languages>
+	
 	<config>
 		<fields name="params">
 			<fieldset name="Customise Joomla! output" label="Customise Joomla! output" addfieldpath="/templates/siegeengine/" >
@@ -80,6 +74,10 @@
 					<field name="analytics" type="text" default="UA-XXXXX-X" label="Google Analytics ID" description="Change UA-XXXXX-X to be your site's ID" size="15" />
 					<field name="menuModTitle" type="text" default="MenuModule" label="Menu Mod Title" description="Change UA-XXXXX-X to be your site's ID" size="15" />
 					<field name="customCSS" type="filelist" default="" label="Load a Custom CSS file" description="" directory="templates/siegeengine/css/" filter="" exclude="foundation\.css|templateCore\.css" stripext="" />
+					<field name="logoUp" type="radio" default="1" label="Logo Selector" description="Select to use a module position or the upload box below for the logo">
+					<option value="1">Select box</option>
+					<option value="0">Module Position</option>
+				</field>
 					<field name="custLogo" label="Load a Custom Logo" type="media" directory="stories" />
 			</fieldset>	
 			

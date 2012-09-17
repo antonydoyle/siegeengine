@@ -17,14 +17,15 @@ include_once (dirname(__FILE__).DS.'framework.php');
   <!-- Included CSS Files -->
   <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/foundation.css">
   <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/templateCore.css">
+  <?php if ($customCSS > 0) : ?>
+  <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/<?php echo $customCSS ?>">
+  <?php endif; ?>	
   <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/modernizr.foundation.js"></script>
   <!-- IE Fix for HTML5 Tags -->
   <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
-  <?php if ($analytics != 'UA-XXXXX-X') : ?>
 <script type="text/javascript">
-
   var _gaq = _gaq || [];
   _gaq.push(['_setAccount', '<?php echo $analytics ?>']);
   _gaq.push(['_trackPageview']);
@@ -36,18 +37,22 @@ include_once (dirname(__FILE__).DS.'framework.php');
   })();
 
 </script>
-<?php endif; ?>	
 
 </head>
 <body>
 <!--Logo / Nav Row -->
     <div class="row">
             <div class="three columns">
-            <a href="<?php echo $this->baseurl ?>" alt="<?php echo $siteName ?>" title="<?php echo $siteName ?>">
+				<?php if ($logoUp > 0) { ?>
+                <a href="<?php echo $this->baseurl ?>" alt="<?php echo $siteName ?>" title="<?php echo $siteName ?>">
                 <img src="<?php echo $custLogo ?>" alt="<?php echo $siteName ?>" title="<?php echo $siteName ?>" />
                 </a>
+                
+                <?php } else { ?>	
+                <jdoc:include type="modules" name="logo" style="html5" />
+                <?php }; ?>	
             </div>
-        <?php if ($menu > 0) : ?>
+        	<?php if ($menu > 0) : ?>
             <nav class="nine columns">
                 <jdoc:include type="modules" name="menu" style="html5" />
             </nav>

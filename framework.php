@@ -10,6 +10,7 @@ $setGeneratorTag		= $this->params->get('setGeneratorTag');
 $analytics 				= $this->params->get('analytics');
 $jQuery					= $this->params->get('jQuery');
 $customCSS    			= $this->params->get('customCSS');
+$logoUp    				= $this->params->get('logoUp');
 $custLogo    			= $this->params->get('custLogo');
 $unOrbit    			= $this->params->get('unOrbit');
 $unReveal    			= $this->params->get('unReveal');
