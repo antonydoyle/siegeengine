@@ -5,4 +5,5 @@
 <p>Feel free to offer suggestions / thoughts / opinions / requests!</p>
 
 <h3>Check out <a href="http://www.siegeengine.org/">SiegeEngine.org</a> for more information.</h3>
-<p>For a module version of the Orbit slider, head over to <a href="http://www.siege21.com/">Siege21.com</a>.
+<h5>Updated - 17/9/12</h5>
+<p>Fixed some minor issues that were breaking a few features.</p>
