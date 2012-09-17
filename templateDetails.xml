@@ -9,9 +9,7 @@
 	<copyright>Copyright (C) 2012 Antony Doyle | Siege21.com | Siegeworks. All rights Reserved</copyright>
 	<license>GNU General Public License version 2 or later</license>
 	<version>1.2</version>	
-	<description>
-	TPL_SIEGEENGINE_DESCRIPTION
-		</description>
+	<description>TPL_SIEGEENGINE_DESCRIPTION</description>
 		
 	<files>
         <filename>index.php</filename>
