@@ -59,75 +59,75 @@
 	
 	<config>
 		<fields name="params">
-			<fieldset name="Customise Joomla! output" label="Customise Joomla! output" addfieldpath="/templates/siegeengine/" >
-				<field name="loadMoo" type="radio" default="0" label="Load MooTools?" description="Load the MooTools JavaScript library that is included with Joomla? If it is not in use you can save a lot of Kb by not loading it. Setting this to no will also disable caption.js">
-					<option value="1">Yes</option>
-					<option value="0">No</option>
+			<fieldset name="TPL_SETTINGS_HEADER_ONE_TITLE" label="TPL_SETTINGS_HEADER_ONE_DESC" addfieldpath="/templates/siegeengine/" >
+				<field name="loadMoo" type="radio" default="0" label="TPL_SETTINGS_LOAD_MOO_LABEL" description="TPL_SETTINGS_LOAD_MOO_DESC">
+					<option value="1">TPL_SETTINGS_LOAD_MOO_YES</option>
+					<option value="0">TPL_SETTINGS_LOAD_MOO_NO</option>
 				</field>
-<field name="jQuery" type="radio" default="1" label="Load jQuery?" description="Load jQuery library? If you're already using jQuery in another extension and cannot turn it off you can turn it off here. Set to load as default.">
-					<option value="1">Yes</option>
-					<option value="0">No</option>
+<field name="jQuery" type="radio" default="1" label="TPL_SETTINGS_LOAD_JQUERY_LABEL" description="TPL_SETTINGS_LOAD_JQUERY_DESC">
+					<option value="1">TPL_SETTINGS_LOAD_JQUERY_YES</option>
+					<option value="0">TPL_SETTINGS_LOAD_JQUERY_NO</option>
 				</field>
 				<field type="spacer" default=" " />	
 				<field type="spacer" default=" " />
-					<field name="setGeneratorTag" type="text" default="" label="Generator Meta Tag" description="Customise the generator meta tag output by your template." size="85" />
-					<field name="analytics" type="text" default="UA-XXXXX-X" label="Google Analytics ID" description="Change UA-XXXXX-X to be your site's ID" size="15" />
-					<field name="menuModTitle" type="text" default="MenuModule" label="Menu Mod Title" description="Change UA-XXXXX-X to be your site's ID" size="15" />
-					<field name="customCSS" type="filelist" default="" label="Load a Custom CSS file" description="" directory="templates/siegeengine/css/" filter="" exclude="foundation\.css|templateCore\.css" stripext="" />
-					<field name="logoUp" type="radio" default="1" label="Logo Selector" description="Select to use a module position or the upload box below for the logo">
-					<option value="1">Select box</option>
-					<option value="0">Module Position</option>
+					<field name="setGeneratorTag" type="text" default="" label="TPL_SETTINGS_GENERATOR_LABEL" description="TPL_SETTINGS_GENERATOR_DESC" size="85" />
+					<field name="analytics" type="text" default="UA-XXXXX-X" label="TPL_SETTINGS_ANALYTICS_LABEL" description="TPL_SETTINGS_ANALYTICS_DESC" size="15" />
+					<field name="menuModTitle" type="text" default="MenuModule" label="TPL_SETTINGS_MENUMODULE_LABEL" description="TPL_SETTINGS_MENUMODULE_DESC" size="15" />
+					<field name="customCSS" type="filelist" default="" label="TPL_SETTINGS_CUSTOM_CSS_LABEL" description="TPL_SETTINGS_CUSTOM_CSS_DESC" directory="templates/siegeengine/css/" filter="" exclude="foundation\.css|templateCore\.css" stripext="" />
+					<field name="logoUp" type="radio" default="1" label="TPL_SETTINGS_LOGO_SELECT_LABEL" description="TPL_SETTINGS_LOGO_SELECT_DESC">
+					<option value="1">TPL_SETTINGS_LOGO_SELECT_UP</option>
+					<option value="0">TPL_SETTINGS_LOGO_SELECT_MOD</option>
 				</field>
-					<field name="custLogo" label="Load a Custom Logo" type="media" directory="stories" />
+					<field name="custLogo" label="TPL_SETTINGS_LOGO_CUS_LABEL" description="TPL_SETTINGS_LOGO_CUS_DESC" type="media" directory="stories" />
 			</fieldset>	
 			
-			<fieldset name="Foundation Options" label="Foundation Options" addfieldpath="/templates/siegeengine/" >
-							<field type="spacer" default=" " label="*Note* Selecting Load minified Foundation.js will unload all of the individual .js files. If you are using individual .js files, you MUST load jQuery!"/>
+			<fieldset name="Foundation Options" label="TPL_SETTINGS_FOUNDATION_OPTIONS_LABEL" addfieldpath="/templates/siegeengine/" >
+							<field type="spacer" default=" " label="TPL_SETTINGS_FOUNDATION_OPTIONS_NOTE"/>
 <field type="spacer" default=" " />
-				<field name="unOrbit" type="radio" default="1" label="Load Orbit.js" description="">
-					<option value="1">Yes</option>
-					<option value="0">No</option>
+				<field name="unOrbit" type="radio" default="1" label="TPL_SETTINGS_FOUNDATION_ORBIT_LABEL" description="TPL_SETTINGS_FOUNDATION_ORBIT_DESC">
+					<option value="1">TPL_SETTINGS_FOUNDATION_ALL_YES</option>
+					<option value="0">TPL_SETTINGS_FOUNDATION_ALL_NO</option>
 				</field>
 
-				<field name="unReveal" type="radio" default="1" label="Load reveal.js" description="">
-					<option value="1">Yes</option>
-					<option value="0">No</option>
+				<field name="unReveal" type="radio" default="1" label="TPL_SETTINGS_FOUNDATION_REVEAL_LABEL" description="TPL_SETTINGS_FOUNDATION_REVEAL_DESC">
+					<option value="1">TPL_SETTINGS_FOUNDATION_ALL_YES</option>
+					<option value="0">TPL_SETTINGS_FOUNDATION_ALL_NO</option>
 				</field>
-				<field name="unNav" type="radio" default="1" label="Load navigation.js" description="">
-					<option value="1">Yes</option>
-					<option value="0">No</option>
+				<field name="unNav" type="radio" default="1" label="TPL_SETTINGS_FOUNDATION_NAV_LABEL" description="TPL_SETTINGS_FOUNDATION_NAV_DESC">
+					<option value="1">TPL_SETTINGS_FOUNDATION_ALL_YES</option>
+					<option value="0">TPL_SETTINGS_FOUNDATION_ALL_NO</option>
 				</field>			
-				<field name="unButt" type="radio" default="1" label="Load buttons.js" description="">
-					<option value="1">Yes</option>
-					<option value="0">No</option>
+				<field name="unButt" type="radio" default="1" label="TPL_SETTINGS_FOUNDATION_BUTT_LABEL" description="TPL_SETTINGS_FOUNDATION_BUTT_DESC">
+					<option value="1">TPL_SETTINGS_FOUNDATION_ALL_YES</option>
+					<option value="0">TPL_SETTINGS_FOUNDATION_ALL_NO</option>
 				</field>
-								<field name="unTabs" type="radio" default="1" label="Load tabs.js" description="">
-					<option value="1">Yes</option>
-					<option value="0">No</option>
+								<field name="unTabs" type="radio" default="1" label="TPL_SETTINGS_FOUNDATION_TABS_LABEL" description="TPL_SETTINGS_FOUNDATION_TABS_DESC">
+					<option value="1">TPL_SETTINGS_FOUNDATION_ALL_YES</option>
+					<option value="0">TPL_SETTINGS_FOUNDATION_ALL_NO</option>
 				</field>
-								<field name="unForms" type="radio" default="1" label="Load forms.js" description="">
-					<option value="1">Yes</option>
-					<option value="0">No</option>
+								<field name="unForms" type="radio" default="1" label="TPL_SETTINGS_FOUNDATION_FORMS_LABEL" description="TPL_SETTINGS_FOUNDATION_FORMS_DESC">
+					<option value="1">TPL_SETTINGS_FOUNDATION_ALL_YES</option>
+					<option value="0">TPL_SETTINGS_FOUNDATION_ALL_NO</option>
 				</field>
-								<field name="unTooltips" type="radio" default="1" label="Load tooltips.js" description="">
-					<option value="1">Yes</option>
-					<option value="0">No</option>
+								<field name="unTooltips" type="radio" default="1" label="TPL_SETTINGS_FOUNDATION_TOOL_LABEL" description="TPL_SETTINGS_FOUNDATION_TOOL_DESC">
+					<option value="1">TPL_SETTINGS_FOUNDATION_ALL_YES</option>
+					<option value="0">TPL_SETTINGS_FOUNDATION_ALL_NO</option>
 				</field>
-								<field name="unAccord" type="radio" default="1" label="Load accordion.js" description="">
-					<option value="1">Yes</option>
-					<option value="0">No</option>
+								<field name="unAccord" type="radio" default="1" label="TPL_SETTINGS_FOUNDATION_ACCORD_LABEL" description="TPL_SETTINGS_FOUNDATION_ACCORD_DESC">
+					<option value="1">TPL_SETTINGS_FOUNDATION_ALL_YES</option>
+					<option value="0">TPL_SETTINGS_FOUNDATION_ALL_NO</option>
 				</field>
-								<field name="unPlaceholder" type="radio" default="1" label="Load placeholder.js" description="">
-					<option value="1">Yes</option>
-					<option value="0">No</option>
+								<field name="unPlaceholder" type="radio" default="1" label="TPL_SETTINGS_FOUNDATION_PLACEHOLDER_LABEL" description="TPL_SETTINGS_FOUNDATION_PLACEHOLDER_DESC">
+					<option value="1">TPL_SETTINGS_FOUNDATION_ALL_YES</option>
+					<option value="0">TPL_SETTINGS_FOUNDATION_ALL_NO</option>
 				</field>
-								<field name="unAlerts" type="radio" default="1" label="Load alerts.js" description="">
-					<option value="1">Yes</option>
-					<option value="0">No</option>
+								<field name="unAlerts" type="radio" default="1" label="TPL_SETTINGS_FOUNDATION_ALERTS_LABEL" description="TPL_SETTINGS_FOUNDATION_ALERTS_DESC">
+					<option value="1">TPL_SETTINGS_FOUNDATION_ALL_YES</option>
+					<option value="0">TPL_SETTINGS_FOUNDATION_ALL_NO</option>
 				</field>
-					<field name="minFound" type="radio" default="0" label="Load minified foundry.js (disables all options above)" description="">
-					<option value="1">Yes</option>
-					<option value="0">No</option>
+					<field name="minFound" type="radio" default="0" label="TPL_SETTINGS_FOUNDATION_MINFOUND_LABEL" description="TPL_SETTINGS_FOUNDATION_MINFOUND_DESC">
+					<option value="1">TPL_SETTINGS_FOUNDATION_ALL_YES</option>
+					<option value="0">TPL_SETTINGS_FOUNDATION_ALL_NO</option>
 				</field>	
 			</fieldset>					
 		</fields>
