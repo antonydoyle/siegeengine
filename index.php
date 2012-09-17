@@ -17,7 +17,7 @@ include_once (dirname(__FILE__).DS.'framework.php');
   <!-- Included CSS Files -->
   <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/foundation.css">
   <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/templateCore.css">
-  <?php if ($customCSS > 0) : ?>
+  <?php if ($customCSS != "-1") : ?>
   <link rel="stylesheet" href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/<?php echo $customCSS ?>">
   <?php endif; ?>	
   <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/modernizr.foundation.js"></script>
