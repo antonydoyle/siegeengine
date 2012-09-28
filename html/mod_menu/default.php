@@ -1,20 +1,21 @@
 <?php
 /**
- * @package		Joomla.Site
- * @subpackage	mod_menu
- * @copyright	Copyright (C) 2005 - 2012 Open Source Matters, Inc. All rights reserved.
- * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ * @package     Joomla.Site
+ * @subpackage  mod_menu
+ *
+ * @copyright   Copyright (C) 2005 - 2012 Open Source Matters, Inc. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
-// No direct access.
 defined('_JEXEC') or die;
 
 // Note. It is important to remove spaces between elements.
 ?>
-
-<ul class="nav-bar"<?php
+<?php // The menu class is deprecated. Use nav instead. ?>
+<ul class="nav-bar <?php echo $class_sfx;?>"<?php
 	$tag = '';
-	if ($params->get('tag_id')!=NULL) {
+	if ($params->get('tag_id') != null)
+	{
 		$tag = $params->get('tag_id').'';
 		echo ' id="'.$tag.'"';
 	}
@@ -31,16 +32,18 @@ foreach ($list as $i => &$item) :
 	}
 	elseif ($item->type == 'alias') {
 		$aliasToId = $item->params->get('aliasoptions');
-		if (count($path) > 0 && $aliasToId == $path[count($path)-1]) {
+		if (count($path) > 0 && $aliasToId == $path[count($path) - 1]) {
 			$class .= ' active';
 		}
 		elseif (in_array($aliasToId, $path)) {
 			$class .= ' alias-parent-active';
 		}
 	}
-
 	if ($item->deeper) {
 		$class .= 'deeper has-flyout';
+	}
+	if ($item->deeper) {
+		$class .= ' deeper';
 	}
 
 	if ($item->parent) {
@@ -65,12 +68,9 @@ foreach ($list as $i => &$item) :
 			require JModuleHelper::getLayoutPath('mod_menu', 'default_url');
 			break;
 	endswitch;
-			if ($item->deeper) {
-			echo '	<a class="flyout-toggle" href="#">
-							<span> </span>
-							</a>';
+	if ($item->deeper) {
+				echo '	<a class="flyout-toggle" href="#"><span> </span></a>';
 	}
-
 	// The next item is deeper.
 	if ($item->deeper) {
 		echo '<ul class="flyout">';
@@ -85,27 +85,4 @@ foreach ($list as $i => &$item) :
 		echo '</li>';
 	}
 endforeach;
-
-?>
-<?php
-
-$doc      = JFactory::getDocument();
-$renderer = $doc->loadRenderer( 'modules' );
-$html5      = array( 'style' => 'html5' );
-$template   = $app->getTemplate(true);
-$params = $template->params;
-$menuModTitle   = $params->get('menuModTitle');
-?>
-<li class="has-flyout">
-  <a href="#"><?php echo $menuModTitle ?></a>
-  <a href="#" class="flyout-toggle"><span> </span></a>
-  <div class="flyout right">
-       <div class="row">
-<?php
-echo $renderer->render('menuMod', $html5, null);
-?>
-</div>
-</div>
-</li>
-
-</ul>
+?></ul>

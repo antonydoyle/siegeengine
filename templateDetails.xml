@@ -68,10 +68,11 @@
 				</field>
 				<field type="spacer" default=" " />	
 				<field type="spacer" default=" " />
+					<field name="setWidth" type="text" default="1440" label="TPL_SETTINGS_SETWIDTH_LABEL" description="TPL_SETTINGS_SETWIDTH_DESC" size="15" />
 					<field name="setGeneratorTag" type="text" default="" label="TPL_SETTINGS_GENERATOR_LABEL" description="TPL_SETTINGS_GENERATOR_DESC" size="85" />
 					<field name="analytics" type="text" default="UA-XXXXX-X" label="TPL_SETTINGS_ANALYTICS_LABEL" description="TPL_SETTINGS_ANALYTICS_DESC" size="15" />
 					<field name="menuModTitle" type="text" default="MenuModule" label="TPL_SETTINGS_MENUMODULE_LABEL" description="TPL_SETTINGS_MENUMODULE_DESC" size="15" />
-					<field name="customCSS" type="filelist" default="" label="TPL_SETTINGS_CUSTOM_CSS_LABEL" description="TPL_SETTINGS_CUSTOM_CSS_DESC" directory="templates/siegeengine/css/" filter="" exclude="foundation\.css|templateCore\.css" stripext="" />
+					<field name="customCSS" type="filelist" default="" label="TPL_SETTINGS_CUSTOM_CSS_LABEL" description="TPL_SETTINGS_CUSTOM_CSS_DESC" directory="templates/siegeengine/css/" filter="" exclude="foundation\.css|templateCore\.css|index\.html" stripext="" />
 					<field name="logoUp" type="radio" default="1" label="TPL_SETTINGS_LOGO_SELECT_LABEL" description="TPL_SETTINGS_LOGO_SELECT_DESC">
 					<option value="1">TPL_SETTINGS_LOGO_SELECT_UP</option>
 					<option value="0">TPL_SETTINGS_LOGO_SELECT_MOD</option>

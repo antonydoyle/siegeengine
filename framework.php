@@ -23,7 +23,7 @@ $unAccord	  			= $this->params->get('unAccord');
 $unPlaceholder 			= $this->params->get('unPlaceholder');
 $unAlerts				= $this->params->get('unAlerts');
 $minFound				= $this->params->get('minFound');
-
+$setWidth    			= $this->params->get('setWidth');
 
 $pageTitle = $this->getTitle();
 $option = JRequest::getCmd('option');
@@ -35,8 +35,7 @@ if ($option=="com_content" && $view=="article") {
     $article->load($article_id);
     
 }
-$config =& JFactory::getConfig();
-$siteName		=  $config->getValue( 'config.sitename' );
+
 $logo = (int) ($this->countModules('logo') > 0);
 $menu = (int) ($this->countModules('menu') > 0);
 
@@ -164,8 +163,9 @@ switch( $code ) {
 // GPL code taken from Construct template framework by Matt Thomas http://construct-framework.com/
 
 // To enable use of site configuration
-$app = JFactory::getApplication();
-
+$app 					= JFactory::getApplication();
+$pageParams             = $app->getParams();
+$sitename				= $app->getCfg('sitename');
 // Returns a reference to the global document object
 $doc = JFactory::getDocument();
 
@@ -177,15 +177,22 @@ $this->setGenerator($setGeneratorTag);
 
 // Remove MooTools if set to no.
 if ( !$loadMoo ) {
-unset($doc->_scripts[$this->baseurl.'/media/system/js/mootools-core.js']);
+	unset($doc->_scripts[$this->baseurl.'/media/system/js/mootools-core.js']);
     unset($doc->_scripts[$this->baseurl.'/media/system/js/mootools-more.js']);
     unset($doc->_scripts[$this->baseurl.'/media/system/js/core.js']);
     unset($doc->_scripts[$this->baseurl.'/media/system/js/caption.js']);
+    unset($doc->_scripts[$this->baseurl.'/media/system/js/modal.js']);
     unset($doc->_scripts[$this->baseurl.'/media/system/js/mootools.js']);
     unset($doc->_scripts[$this->baseurl.'/plugins/system/mtupgrade/mootools.js']);
 }
 
 #-------------End Construct Code--------------------------------------#
+
+// Add stylesheets etc
+$doc->addStyleSheet($template.'/css/foundation.css');
+$doc->addStyleSheet($template.'/css/templateCore.css');
+$doc->addCustomTag('<script src="'.$template.'/js/modernizr.foundation.js"></script>');
+
 
  if ($minFound > 0) { 
     $doc->addCustomTag('<script src="'.$template.'/js/foundation.js"></script>');
