@@ -37,15 +37,18 @@ article header {
 	display:inline-block;
 }
 .article-meta {
-	width:240px;
+
+}
+.article-footer ul {
+	list-style:none;
+}
+dl.article-info {
+		width:240px;
 	background: none repeat scroll 0 0 #F2F2F2;
     border: 1px solid #E6E6E6;
     margin: 0 0 22px;
     padding: 20px;
 	float:right;
-}
-.article-footer ul {
-	list-style:none;
 }
 .article-info dt {
 	font-weight:bold;
@@ -55,6 +58,9 @@ article header {
 }
 .article-info dd {
 	margin-bottom:3px;
+}
+ul.category {
+	list-style:none;	
 }
 .pagenav {
 	list-style:none;	

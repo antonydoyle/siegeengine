@@ -19,21 +19,7 @@ JHtml::_('behavior.tooltip');
 JHtml::_('behavior.framework');
 ?>
 
-	<?php if ($params->get('show_print_icon') || $params->get('show_email_icon') || $canEdit) : ?>
-	<div class="btn-group pull-right"> <a class="btn dropdown-toggle" data-toggle="dropdown" href="#"> <i class="icon-cog"></i> <span class="caret"></span> </a>
-		<ul class="dropdown-menu">
-			<?php if ($params->get('show_print_icon')) : ?>
-			<li class="print-icon"> <?php echo JHtml::_('icon.print_popup', $this->item, $params); ?> </li>
-			<?php endif; ?>
-			<?php if ($params->get('show_email_icon')) : ?>
-			<li class="email-icon"> <?php echo JHtml::_('icon.email', $this->item, $params); ?> </li>
-			<?php endif; ?>
-			<?php if ($canEdit) : ?>
-			<li class="edit-icon"> <?php echo JHtml::_('icon.edit', $this->item, $params); ?> </li>
-			<?php endif; ?>
-		</ul>
-	</div>
-	<?php endif; ?>
+	
 	<?php if ($params->get('show_title') || $this->item->state == 0 || ($params->get('show_author') && !empty($this->item->author ))) : ?>
 	<div class="page-header">
 		<?php if ($params->get('show_title')) : ?>
@@ -50,21 +36,7 @@ JHtml::_('behavior.framework');
 			<span class="label label-warning"><?php echo JText::_('JUNPUBLISHED'); ?></span>
 		<?php endif; ?>
 
-		<?php if ($params->get('show_author') && !empty($this->item->author )) : ?>
-		<small class="createdby">
-		<?php $author = $this->item->author; ?>
-		<?php $author = ($this->item->created_by_alias ? $this->item->created_by_alias : $author); ?>
-		<?php if (!empty($this->item->contactid ) && $params->get('link_author') == true) : ?>
-		<?php
-		echo JText::sprintf(
-				'COM_CONTENT_WRITTEN_BY',
-				JHtml::_('link', JRoute::_('index.php?option=com_contact&view=contact&id='.$this->item->contactid), $author)
-		); ?>
-		<?php else :?>
-		<?php echo JText::sprintf('COM_CONTENT_WRITTEN_BY', $author); ?>
-		<?php endif; ?>
-		</small>
-		<?php endif; ?>
+		
 	</div>
 	<?php endif; ?>
 
@@ -72,8 +44,8 @@ JHtml::_('behavior.framework');
 	<?php $useDefList = (($params->get('show_modify_date')) or ($params->get('show_publish_date'))
 		or ($params->get('show_hits'))); ?>
 	<?php if ($useDefList AND ($info == 0 OR $info == 2)) : ?>
-		<div class="article-info muted">
 			<dl class="article-info">
+            
 			<dt class="article-info-term"><?php  echo JText::_('COM_CONTENT_ARTICLE_INFO'); ?></dt>
 
 			<?php if ($params->get('show_parent_category') && !empty($this->item->parent_slug)) : ?>
@@ -135,8 +107,35 @@ JHtml::_('behavior.framework');
 					</dd>
 				<?php endif; ?>
 			<?php endif; ?>
+            <?php if ($params->get('show_author') && !empty($this->item->author )) : ?>
+		<small class="createdby">
+		<?php $author = $this->item->author; ?>
+		<?php $author = ($this->item->created_by_alias ? $this->item->created_by_alias : $author); ?>
+		<?php if (!empty($this->item->contactid ) && $params->get('link_author') == true) : ?>
+		<?php
+		echo JText::sprintf(
+				'COM_CONTENT_WRITTEN_BY',
+				JHtml::_('link', JRoute::_('index.php?option=com_contact&view=contact&id='.$this->item->contactid), $author)
+		); ?>
+		<?php else :?>
+		<?php echo JText::sprintf('COM_CONTENT_WRITTEN_BY', $author); ?>
+		<?php endif; ?>
+		</small>
+		<?php endif; ?>
+            <?php if ($params->get('show_print_icon') || $params->get('show_email_icon') || $canEdit) : ?>
+		<ul class="link-list">
+			<?php if ($params->get('show_print_icon')) : ?>
+			<li class="print-icon"> <?php echo JHtml::_('icon.print_popup', $this->item, $params); ?> </li>
+			<?php endif; ?>
+			<?php if ($params->get('show_email_icon')) : ?>
+			<li class="email-icon"> <?php echo JHtml::_('icon.email', $this->item, $params); ?> </li>
+			<?php endif; ?>
+			<?php if ($canEdit) : ?>
+			<li class="edit-icon"> <?php echo JHtml::_('icon.edit', $this->item, $params); ?> </li>
+			<?php endif; ?>
+		</ul>
+	<?php endif; ?>
 			</dl>
-		</div>
 	<?php endif; ?>
 
 	<?php if (!$params->get('show_intro')) : ?>
@@ -156,6 +155,7 @@ JHtml::_('behavior.framework');
 
 	<?php if ($useDefList AND ($info == 1 OR $info == 2)) : ?>
 		<div class="article-info muted">
+        
 			<dl class="article-info">
 			<dt class="article-info-term"><?php  echo JText::_('COM_CONTENT_ARTICLE_INFO'); ?></dt>
 

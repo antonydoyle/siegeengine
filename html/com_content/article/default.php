@@ -51,7 +51,7 @@ if (!empty($this->item->pagination) AND $this->item->pagination && !$this->item-
 <?php endif; ?>
 <?php if ($canEdit ||  $params->get('show_print_icon') || $params->get('show_email_icon')) : ?>
 	<section class="actions">
-    <ul>
+    <ul class="link-list">
 	<?php if (!$this->print) : ?>
 		<?php if ($params->get('show_print_icon')) : ?>
 			<li class="print-icon">
