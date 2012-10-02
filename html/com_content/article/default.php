@@ -49,7 +49,7 @@ if (!empty($this->item->pagination) AND $this->item->pagination && !$this->item-
 	</h1>
 </header>    
 <?php endif; ?>
-<section class="article-details panel">
+<section class="article-details">
 <ul>
 <li>
 <?php if ($canEdit ||  $params->get('show_print_icon') || $params->get('show_email_icon')) : ?>

@@ -1,11 +1,12 @@
-(function ($){
-  
+;(function ($, window, undefined) {
+  'use strict';
+
   $.fn.foundationNavigation = function (options) {
-    
+
     var lockNavBar = false;
     // Windows Phone, sadly, does not register touch events :(
     if (Modernizr.touch || navigator.userAgent.match(/Windows Phone/i)) {
-      $('.nav-bar a.flyout-toggle', this).on('click.fndtn touchstart.fndtn', function (e) {
+      $(document).on('click.fndtn touchstart.fndtn', '.nav-bar a.flyout-toggle', function (e) {
         e.preventDefault();
         var flyout = $(this).siblings('.flyout').first();
         if (lockNavBar === false) {
@@ -24,7 +25,7 @@
         $(this).children('.flyout').hide();
       });
     }
-    
+
   };
 
-})( jQuery );
+})( jQuery, this );
