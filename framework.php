@@ -24,6 +24,7 @@ $unPlaceholder 			= $this->params->get('unPlaceholder');
 $unAlerts				= $this->params->get('unAlerts');
 $minFound				= $this->params->get('minFound');
 $setWidth    			= $this->params->get('setWidth');
+$templateLayout 				= $this->params->get('layout');
 
 $pageTitle = $this->getTitle();
 $option = JRequest::getCmd('option');

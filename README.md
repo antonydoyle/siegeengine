@@ -26,3 +26,8 @@
 <li>Fixed a menu issue causing problems on 3.0</li>
 </ul>
 <p>Some features are still untested on 3.0, so please use with caution and take backups! </p>
+<h5>Updated - 02/10/12</h5>
+<p>Updated Foundation core files.</p>
+<p>Few styling fixes.</p>
+<p>Added a layout selector & full width layout. You can now create your own, drop them in the layouts folder and pick them from the template admin.</p>
+
