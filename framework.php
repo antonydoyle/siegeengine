@@ -36,6 +36,7 @@ if ($option=="com_content" && $view=="article") {
     
 }
 
+// Count Modules & Stuff
 $logo = (int) ($this->countModules('logo') > 0);
 $menu = (int) ($this->countModules('menu') > 0);
 
@@ -77,7 +78,7 @@ $menuMod = (int) ($this->countModules('menuMod') > 0);
 $menuModTitle 	= $this->params->get('menuModTitle');
 
 
-// Get the column widths	
+// Get the column widths: There's probably a neater way to do it.
 
 if (($right == "0") && ($left == "0")) {
 $mainWidth = 'twelve columns';
@@ -92,6 +93,9 @@ $mainWidth = 'nine columns'; $leftWidth = 'three columns';
 elseif (($right != "0") && ($left != "0")) {
 $mainWidth = 'eight columns'; $leftWidth = 'two columns'; $rightWidth = 'two columns';
 }
+
+//Peripheral module logic. 
+
 // Top Module Logic
 $top = compact( 'top1', 'top2', 'top3' );//get modules into array
 sort( $top );//sort array so it is in numerical order
@@ -158,7 +162,6 @@ switch( $code ) {
 }
 
 
-
 #----------------------------- Construct Code Snippets-----------------------------#
 // GPL code taken from Construct template framework by Matt Thomas http://construct-framework.com/
 
@@ -192,7 +195,6 @@ if ( !$loadMoo ) {
 $doc->addStyleSheet($template.'/css/foundation.css');
 $doc->addStyleSheet($template.'/css/templateCore.css');
 $doc->addCustomTag('<script src="'.$template.'/js/modernizr.foundation.js"></script>');
-
 
  if ($minFound > 0) { 
     $doc->addCustomTag('<script src="'.$template.'/js/foundation.js"></script>');

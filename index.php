@@ -92,7 +92,7 @@ include_once JPATH_THEMES . '/' . $this->template . '/framework.php';
             </div>
         <?php endif; ?>	
         <?php if ($top3 > 0) : ?>
-            <div class="<?php echo $topWidth ?>  last">
+            <div class="<?php echo $topWidth ?>">
                 <jdoc:include type="modules" name="top3" style="html5" />
             </div>
         <?php endif; ?>	    
@@ -119,7 +119,7 @@ include_once JPATH_THEMES . '/' . $this->template . '/framework.php';
                             </div>
                         <?php endif; ?>	
                         <?php if ($above3 > 0) : ?>
-                            <div class="<?php echo $aboveWidth ?>  last">
+                            <div class="<?php echo $aboveWidth ?>">
                                 <jdoc:include type="modules" name="above3" style="html5" />
                             </div>
                         <?php endif; ?>	 
@@ -138,7 +138,7 @@ include_once JPATH_THEMES . '/' . $this->template . '/framework.php';
                             </div>
                         <?php endif; ?>	
                         <?php if ($below3 > 0) : ?>
-                            <div class="<?php echo $belowWidth ?>  last">
+                            <div class="<?php echo $belowWidth ?>">
                                 <jdoc:include type="modules" name="below3" style="html5" />
                             </div>
                         <?php endif; ?>	                     
@@ -149,9 +149,6 @@ include_once JPATH_THEMES . '/' . $this->template . '/framework.php';
                  <jdoc:include type="modules" name="right" style="html5" />
               </div>
          <?php endif; ?>	
-    
-    
-    
     </div>
 
 <!--Bottom Row -->
@@ -167,7 +164,7 @@ include_once JPATH_THEMES . '/' . $this->template . '/framework.php';
             </div>
         <?php endif; ?>	
         <?php if ($bottom3 > 0) : ?>
-            <div class="<?php echo $bottomWidth ?>  last">
+            <div class="<?php echo $bottomWidth ?>">
                 <jdoc:include type="modules" name="bottom3" style="html5" />
             </div>
         <?php endif; ?>	      
@@ -186,12 +183,12 @@ include_once JPATH_THEMES . '/' . $this->template . '/framework.php';
             </div>
         <?php endif; ?>	
         <?php if ($footerTop3 > 0) : ?>
-            <div class="<?php echo $footerTopWidth ?>  last">
+            <div class="<?php echo $footerTopWidth ?>">
                 <jdoc:include type="modules" name="footerTop3" style="html5" />
             </div>
         <?php endif; ?>	
         <?php if ($footerTop4 > 0) : ?>
-            <div class="<?php echo $footerTopWidth ?>  last">
+            <div class="<?php echo $footerTopWidth ?>">
                 <jdoc:include type="modules" name="footerTop4" style="html5" />
             </div>
         <?php endif; ?>	        
@@ -210,16 +207,12 @@ include_once JPATH_THEMES . '/' . $this->template . '/framework.php';
             </div>
         <?php endif; ?>	
         <?php if ($footer3 > 0) : ?>
-            <div class="<?php echo $footerWidth ?>  last">
+            <div class="<?php echo $footerWidth ?>">
                 <jdoc:include type="modules" name="footer3" style="html5" />
             </div>
         <?php endif; ?>	      
     </div>
 
-
-
-
-  
   <!-- Initialize JS Plugins -->
   <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/app.js"></script>
 
