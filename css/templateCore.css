@@ -8,15 +8,7 @@
 		width:auto;	
 	}
 }
-/*Login Module  ---------------------- */
 
-fieldset {
-	border:none;
-	margin-bottom:25px;	
-}
-fieldset.userdata {
-	margin-bottom:10px;	
-}
 
 /*article stuff  ---------------------- */
 article header {
@@ -142,3 +134,105 @@ display: inline-block;
 .registration input, .login input {
 	width:300px;	
 }
+
+/*Login Module  ---------------------- */
+
+fieldset {
+	border:none;
+	margin-bottom:25px;	
+}
+fieldset.userdata {
+	margin-bottom:10px;	
+}
+/* Login toggle stuff (inc related mod_login override stuff) */
+#form-login-password {
+}
+#form-login-remember {
+	width:200px;
+}
+.toggleLabel {
+margin-bottom: 5px;
+}
+.padded {
+	margin-bottom:10px;	
+}
+.forgot {
+	line-height:1.7em;
+}
+input.button[type="submit"], input.medium.button[type="submit"] {
+    padding: 6px 20px 9px;
+}
+.toggle {
+    width: 50px;
+    height: 15px;
+    display: block;
+	background-image: -webkit-linear-gradient(hsla(0,0%,0%,.1), hsla(0,0%,100%,.1)), -webkit-linear-gradient(left, #0C6  48%, #f66 48%);
+	background-image: -moz-linear-gradient(hsla(0,0%,0%,.1), hsla(0,0%,100%,.1)), -moz-linear-gradient(left, #0C6 48%, #f66 48%);
+	background-image: -o-linear-gradient(hsla(0,0%,0%,.1), hsla(0,0%,100%,.1)), -o-linear-gradient(left, #0C6  48%, #f66 48%);
+	background-image: -ms-linear-gradient(hsla(0,0%,0%,.1), hsla(0,0%,100%,.1)), -ms-linear-gradient(left, #0C6  48%, #f66 48%);
+	background-image: linear-gradient(hsla(0,0%,0%,.1), hsla(0,0%,100%,.1)), linear-gradient(left, #0C6  48%, #f66 48%);    position: relative;
+    border-radius: 20px;
+    box-shadow: 0 1px 1px 0 rgba(255, 255, 255, .45), inset 0 1px 2px 0 rgba(0, 0, 0, .45);
+    font-size: 12px;
+    text-align: left;
+	
+}
+.toggle:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 0;
+}
+.toggle:after {
+    position: relative;
+    z-index: 2;
+    width: 95%;
+    margin: 5px 3px 3px 3px;
+    float: left;
+    content: attr(data-on) "\a" attr(data-off);
+    white-space: pre;
+    text-align: center;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 2;
+}
+.toggle input {
+    position: absolute;
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    opacity: 0;
+}
+.toggle span {
+    width: 28px;
+    height:18px;
+    background-color: #CCC;
+    display: block;
+    position: absolute;
+    top: -2px;
+    z-index: 99;
+    border-radius: 10px;
+    box-shadow: 0 1px 2px 1px rgba(0, 0, 0, .65), inset 0 1px 0 0 rgba(255, 255, 255, .85);
+    background-color: #fd5555;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#d6d6d6)); /* Safari 4+, Chrome */
+  background-image: -webkit-linear-gradient(top, #ffffff, #d6d6d6); /* Chrome 10+, Safari 5.1+, iOS 5+ */
+  background-image:    -moz-linear-gradient(top, #ffffff, #d6d6d6); /* Firefox 3.6-15 */
+  background-image:      -o-linear-gradient(top, #ffffff, #d6d6d6); /* Opera 11.10-12.00 */
+  background-image:         linear-gradient(to bottom, #ffffff, #d6d6d6); /* Firefox 16+, IE10, Opera 12.50+ */
+		-webkit-transition: .25s;
+	-moz-transition: .25s;
+	-o-transition: .25s;
+	-ms-transition: .25s;
+	transition: .25s;
+}
+.toggle input:checked+span {
+    left: 43%;
+		-webkit-transition: .25s;
+	-moz-transition: .25s;
+	-o-transition: .25s;
+	-ms-transition: .25s;
+	transition: .25s;
+	}
+	.toggle > input:checked {
+		background:#090;	
+	}

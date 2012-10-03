@@ -44,21 +44,34 @@ JHtml::_('behavior.keepalive');
 	<p id="form-login-password">
 		<label for="modlgn-passwd"><?php echo JText::_('JGLOBAL_PASSWORD') ?></label>
 		<input id="modlgn-passwd" type="password" name="password" class="inputbox" size="18"  />
+
 	</p>
 	<?php if (JPluginHelper::isEnabled('system', 'remember')) : ?>
 	<p id="form-login-remember">
-		<label for="modlgn-remember"><?php echo JText::_('MOD_LOGIN_REMEMBER_ME') ?></label>
+    <div class="six columns padded">
+             <p class="toggleLabel"><span>Show password</span></p>
+			<label class="toggle" >
+			    <input type='checkbox' onchange="document.getElementById('modlgn-passwd').type = this.checked ? 'text' : 'password'"/>
+			    <span></span>
+			</label>
+       </div>
+       <div class="six columns padded">
+		<p class="toggleLabel"><span><?php echo JText::_('MOD_LOGIN_REMEMBER_ME') ?></span></p>
+        <label class="toggle" >
 		<input id="modlgn-remember" type="checkbox" name="remember" class="inputbox" value="yes"/>
+        <span></span>
+        </label>
+        </div>
 	</p>
 	<?php endif; ?>
+    
 	<input type="submit" name="Submit" class="button" value="<?php echo JText::_('JLOGIN') ?>" />
 	<input type="hidden" name="option" value="com_users" />
 	<input type="hidden" name="task" value="user.login" />
 	<input type="hidden" name="return" value="<?php echo $return; ?>" />
 	<?php echo JHtml::_('form.token'); ?>
-	</fieldset>
     <div href="#" class="small button dropdown">
-    Forgot Password / Username?
+    <span class="forgot">Forgot Password / Username?</span>
 	<ul style="top: 28px;">
 		<li>
 			<a href="<?php echo JRoute::_('index.php?option=com_users&view=reset'); ?>">
@@ -78,6 +91,8 @@ JHtml::_('behavior.keepalive');
 		<?php endif; ?>
 	</ul>
     </div>
+	</fieldset>
+    
 	<?php if ($params->get('posttext')): ?>
 		<div class="posttext">
 		<p><?php echo $params->get('posttext'); ?></p>
