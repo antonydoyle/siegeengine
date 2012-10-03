@@ -220,7 +220,7 @@ input.button[type="submit"], input.medium.button[type="submit"] {
   background-image:    -moz-linear-gradient(top, #ffffff, #d6d6d6); /* Firefox 3.6-15 */
   background-image:      -o-linear-gradient(top, #ffffff, #d6d6d6); /* Opera 11.10-12.00 */
   background-image:         linear-gradient(to bottom, #ffffff, #d6d6d6); /* Firefox 16+, IE10, Opera 12.50+ */
-		-webkit-transition: .25s;
+	-webkit-transition: .25s;
 	-moz-transition: .25s;
 	-o-transition: .25s;
 	-ms-transition: .25s;
@@ -228,7 +228,7 @@ input.button[type="submit"], input.medium.button[type="submit"] {
 }
 .toggle input:checked+span {
     left: 43%;
-		-webkit-transition: .25s;
+	-webkit-transition: .25s;
 	-moz-transition: .25s;
 	-o-transition: .25s;
 	-ms-transition: .25s;
