@@ -49,18 +49,24 @@ JHtml::_('behavior.keepalive');
 	<?php if (JPluginHelper::isEnabled('system', 'remember')) : ?>
 	<p id="form-login-remember">
     <div class="six columns padded">
-             <p class="toggleLabel"><span>Show password</span></p>
-			<label class="toggle" >
-			    <input type='checkbox' onchange="document.getElementById('modlgn-passwd').type = this.checked ? 'text' : 'password'"/>
-			    <span></span>
-			</label>
+    
+    <p class="toggleLabel"><span>Hide password</span></p>
+
+    <div class="toggle-switch">
+    <input type="checkbox" id="toggle-1" checked="" onchange="document.getElementById('modlgn-passwd').type = this.checked ? 'password' : 'text'"/>
+    <div class="bg"></div>
+    <label for="toggle-1"><span>ON</span><span>OFF</span></label>
+    </div>
+   
        </div>
        <div class="six columns padded">
 		<p class="toggleLabel"><span><?php echo JText::_('MOD_LOGIN_REMEMBER_ME') ?></span></p>
-        <label class="toggle" >
-		<input id="modlgn-remember" type="checkbox" name="remember" class="inputbox" value="yes"/>
-        <span></span>
-        </label>
+        
+             <div class="toggle-switch">
+            <input id="toggle-2" checked="checked" type="checkbox" name="remember" class="inputbox"/>
+            <div class="bg"></div>
+            <label for="toggle-2"><span>YES</span><span>NO</span></label>
+            </div>
         </div>
 	</p>
 	<?php endif; ?>
