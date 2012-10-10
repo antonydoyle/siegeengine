@@ -9,12 +9,12 @@
                 </a>
                 
                 <?php } else { ?>	
-                <jdoc:include type="modules" name="logo" style="html5" />
+                <jdoc:include type="modules" name="logo" style="none" />
                 <?php }; ?>	
             </div>
         	<?php if ($menu > 0) : ?>
             <nav class="nine columns">
-                <jdoc:include type="modules" name="menu" style="html5" />
+                <jdoc:include type="modules" name="menu" style="none" />
             </nav>
    		 <?php endif; ?>	
     </div>

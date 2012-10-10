@@ -130,6 +130,8 @@
 					<option value="1">TPL_SETTINGS_FOUNDATION_ALL_YES</option>
 					<option value="0">TPL_SETTINGS_FOUNDATION_ALL_NO</option>
 				</field>	
+<field name="myintegeralue" type="integer" default="Some integer" label="Choose an integer" description="" first="1" last="10" step="1" />
+
 			</fieldset>					
 		</fields>
 	</config>
