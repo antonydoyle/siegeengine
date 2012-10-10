@@ -8,7 +8,7 @@
 	<authorUrl>http://www.antonydoyle.co.uk</authorUrl>
 	<copyright>Copyright (C) 2012 Antony Doyle | Siege21.com | Siegeworks. All rights Reserved</copyright>
 	<license>GNU General Public License version 2 or later</license>
-	<version>1.2</version>	
+	<version>1.4</version>	
 	<description>TPL_SIEGEENGINE_DESCRIPTION</description>
 		
 	<files>
@@ -27,6 +27,7 @@
 		<position>menu</position>
 		<position>slideshow</position>
 		<position>orbit</position>
+		<position>breadcrumbs</position>
 		<position>logo</position>
 		<position>top1</position>
 		<position>top2</position>
