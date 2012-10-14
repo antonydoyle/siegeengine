@@ -49,6 +49,10 @@
 		<position>footerTop2</position>
 		<position>footerTop3</position>
 		<position>footerTop4</position>
+		<position>offCanvasSideMenu</position>		
+		<position>offCanvasSideModule</position>
+		<position>offCanvasTopMenu</position>
+		<position>offCanvasTopModule</position>
 		<position>debug</position>
 	</positions>
 	
@@ -81,6 +85,15 @@
 					<option value="0">TPL_SETTINGS_LOGO_SELECT_MOD</option>
 				</field>
 					<field name="custLogo" label="TPL_SETTINGS_LOGO_CUS_LABEL" description="TPL_SETTINGS_LOGO_CUS_DESC" type="media" directory="stories" />
+					
+					<field name="offCanvas" type="radio" default="1" label="TPL_SETTINGS_OFFCANVAS_LABEL" description="TPL_SETTINGS_TPL_SETTINGS_OFFCANVAS_DESC">
+					<option value="1">TPL_SETTINGS_FOUNDATION_ALL_YES</option>
+					<option value="0">TPL_SETTINGS_FOUNDATION_ALL_NO</option>
+					</field>
+					
+					<field name="topButton" type="text" default="Top" label="TPL_SETTINGS_TOPBUT_LABEL" description="TPL_SETTINGS_TOPBUT_DESC" size="15" />
+					<field name="sideButton" type="text" default="Side" label="TPL_SETTINGS_SIDEBUT_LABEL" description="TPL_SETTINGS_SIDEBUT_DESC" size="15" />
+
 			</fieldset>	
 			
 			<fieldset name="Foundation Options" label="TPL_SETTINGS_FOUNDATION_OPTIONS_LABEL" addfieldpath="/templates/siegeengine/" >

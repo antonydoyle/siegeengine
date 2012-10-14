@@ -24,7 +24,10 @@ $unPlaceholder 			= $this->params->get('unPlaceholder');
 $unAlerts				= $this->params->get('unAlerts');
 $minFound				= $this->params->get('minFound');
 $setWidth    			= $this->params->get('setWidth');
-$templateLayout 				= $this->params->get('layout');
+$templateLayout 		= $this->params->get('layout');
+$offCanvas 				= $this->params->get('offCanvas');
+$topButton    			= $this->params->get('topButton');
+$sideButton	    			= $this->params->get('sideButton');
 
 $pageTitle = $this->getTitle();
 $option = JRequest::getCmd('option');
@@ -38,6 +41,12 @@ if ($option=="com_content" && $view=="article") {
 }
 
 // Count Modules & Stuff
+$offCanvasSideMenu = (int) ($this->countModules('offCanvasSideMenu') > 0);
+$offCanvasSideModule = (int) ($this->countModules('offCanvasSideModule') > 0);
+
+$offCanvasTopMenu = (int) ($this->countModules('offCanvasTopMenu') > 0);
+$offCanvasTopModule = (int) ($this->countModules('offCanvasTopModule') > 0);
+
 $logo = (int) ($this->countModules('logo') > 0);
 $menu = (int) ($this->countModules('menu') > 0);
 
@@ -197,6 +206,7 @@ $doc->addStyleSheet($template.'/css/foundation.css');
 $doc->addStyleSheet($template.'/css/templateCore.css');
 $doc->addCustomTag('<script src="'.$template.'/js/modernizr.foundation.js"></script>');
 
+
  if ($minFound > 0) { 
     $doc->addCustomTag('<script src="'.$template.'/js/foundation.js"></script>');
   }
@@ -245,5 +255,7 @@ $doc->addCustomTag('<script src="'.$template.'/js/modernizr.foundation.js"></scr
   $doc->addCustomTag('<script src="'.$template.'/js/jquery.foundation.alerts.js"></script>');
   } 	
 }
-
-  
+ if ($offCanvas > 0) {
+	$doc->addStyleSheet($template.'/css/offcanvas.css');
+	$doc->addCustomTag('<script src="'.$template.'/js/jquery.offcanvas.js"></script>');
+  }

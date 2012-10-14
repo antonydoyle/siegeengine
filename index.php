@@ -40,12 +40,19 @@ include_once JPATH_THEMES . '/' . $this->template . '/framework.php';
   })();
 </script>
 </head>
-
+    <?php if ($offCanvas > 0) { ?>
+<body class="off-canvas hide-extras slide-nav">
+<?php } else {?>
 <body>
+<?php }?>
+
+
 <?php 
 // Load template layout 
 include_once JPATH_THEMES . '/' . $this->template . '/layouts/'.$templateLayout.''; 
 ?>
+
+
 </body>
 
 </html>

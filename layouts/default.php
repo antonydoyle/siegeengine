@@ -1,4 +1,11 @@
-
+<?php if ($offCanvas > 0) { ?>
+		<nav id="topMenu" role="navigation">
+          <jdoc:include type="modules" name="offCanvasTopMenu" style="none" />										
+		</nav>    
+        <div class="row">
+       		<jdoc:include type="modules" name="offCanvasTopModule" style="html5" />										
+		</div>
+            <?php } ?>
 
 <!--Logo / Nav Row -->
     <div class="row">
@@ -13,12 +20,39 @@
                 <?php }; ?>	
             </div>
         	<?php if ($menu > 0) : ?>
-            <nav class="nine columns">
+            	<?php if ($offCanvas > 0) { ?>
+            <nav id="menu" role="navigation" class="nine columns hide-for-small">
                 <jdoc:include type="modules" name="menu" style="none" />
             </nav>
+            		<p class="show-for-small">
+              <?php if ($offCanvasTopMenu > 0 or $offCanvasTopModule > 0) { ?>
+  				  <a class='menu-button button' id="menuButton" href="#menu"><?php echo $topButton ?></a>
+              <?php } ?>
+              <?php if ($offCanvasSideMenu > 0 or $offCanvasSideModule > 0) { ?>
+  			  	<a class='sidebar-button button' id="sidebarButton" href="#sidebar"><?php echo $sideButton ?></a>
+              <?php } ?>
+  			</p>
+            <? } else { ?>
+            <nav id="menu" role="navigation" class="nine columns">
+                <jdoc:include type="modules" name="menu" style="none" />
+            </nav>
+            <?php } ?>
    		 <?php endif; ?>	
     </div>
-    
+    <?php if ($offCanvas > 0) { ?>
+         <section id="sidebar" role="complementary">
+				 <?php if ($offCanvasSideMenu > 0) { ?>
+                    <nav id="sideMenu" role="navigation">
+                      <jdoc:include type="modules" name="offCanvasSideMenu" style="none" />										
+                	</nav>
+                <?php } ?>
+                <?php if ($offCanvasSideModule > 0) { ?>
+                      <jdoc:include type="modules" name="offCanvasSideModule" style="html5" />										
+                <?php } ?> 
+                
+  		</section>
+          		<section role="main">
+<?php } else { }?>
 <!--Orbit Row -->
     <div class="row">
         <?php if ($orbit > 0) : ?>
@@ -66,6 +100,7 @@
          <?php endif; ?>
          	
                <div class="<?php echo htmlspecialchars($mainWidth); ?>">
+
                			<?php if ($above1 > 0) : ?>
                             <div class="<?php echo $aboveWidth ?>">
                                 <jdoc:include type="modules" name="above1" style="html5" />
@@ -170,7 +205,9 @@
             </div>
         <?php endif; ?>	      
     </div>
-
+<?php if ($offCanvas > 0) { ?>
+  		</section>
+        <?php } else {} ?>
 
   <!-- Initialize JS Plugins -->
   <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/app.js"></script>
