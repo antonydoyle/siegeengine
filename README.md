@@ -16,6 +16,9 @@
 		</ul></p>
 
 <h3>Check out <a href="http://www.siegeengine.org/">SiegeEngine.org</a> for more information.</h3>
+<h5>Updated - 14/10/12</h5>
+<p>Added off-canvas layouts</p>
+<p>Known issue with "show/hide password" feature. Fix coming in next update.</p>
 <h5>Updated - 17/9/12</h5>
 <p>Fixed some minor issues that were breaking a few features.</p>
 <h5>Updated - 28/9/12</h5>
